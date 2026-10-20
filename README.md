@@ -8,7 +8,7 @@ A browser extension that brings prediction-market context to ordinary webpages. 
 
 **Read a webpage → select a question → discover related prediction markets in context.**
 
-[Watch the 19-second introduction](docs/media/oddsseer-extension-intro.mp4) · [Full screenshot and GIF gallery / 中文图文介绍](docs/DEMO.md)
+[Download the 19-second MP4](docs/media/oddsseer-extension-intro.mp4?raw=true) · [Full screenshot and GIF gallery / 中文图文介绍](docs/DEMO.md)
 
 > This earlier interaction demo runs the original extension content script on a fictional local article with fixture market data. The video is an edited sequence of actual UI captures. It demonstrates the interaction, not native Chrome installation or cross-site acceptance of this release.
 

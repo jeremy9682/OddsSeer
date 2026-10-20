@@ -14,7 +14,7 @@ These assets predate the final standalone source corrections. They use the origi
 
 ### 19 秒插件流程 / 19-second extension flow
 
-[打开 MP4 视频 / Open MP4](media/oddsseer-extension-intro.mp4)
+[下载 19 秒 MP4 / Download 19-second MP4](media/oddsseer-extension-intro.mp4?raw=true)
 
 ![浏览网页、选中问题、查看市场 / Read, select, discover](media/oddsseer-extension-intro.gif)
 
@@ -37,7 +37,7 @@ These assets predate the final standalone source corrections. They use the origi
 
 **Everything below is historical integration material, not the current extension feature list.** Paper trading, positions, top-ups, credits, subscriptions and the Trader workspace are not shipped in this source release. Analysis is fixture playback, not model performance; historical “Running / Monitoring Live” labels do not establish active monitoring. PromptTrading is not required to use OddsSeer.
 
-[53 秒历史演示视频 / Historical 53-second MP4](media/oddsseer-walkthrough.mp4)
+[下载 53 秒历史演示 MP4 / Download historical 53-second MP4](media/oddsseer-walkthrough.mp4?raw=true)
 
 <details>
 <summary>展开历史演示 GIF 与封面 / Historical GIF and cover</summary>

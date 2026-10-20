@@ -8,7 +8,7 @@
 
 **浏览网页 → 选中问题 → 在当前页面发现相关预测市场。**
 
-[19 秒插件介绍视频](docs/media/oddsseer-extension-intro.mp4) · [完整截图与 GIF 画廊](docs/DEMO.md)
+[下载 19 秒插件介绍 MP4](docs/media/oddsseer-extension-intro.mp4?raw=true) · [完整截图与 GIF 画廊](docs/DEMO.md)
 
 > 以下为原插件内容脚本在本地虚构文章上的交互演示，使用模拟行情；视频由实际操作截图编排。它用于介绍交互方式，不代表当前版本已完成原生 Chrome 安装或跨网站验收。
 
