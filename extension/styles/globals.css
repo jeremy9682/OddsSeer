@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 插件主题变量 */
+:root {
+  --ext-bg: #ffffff;
+  --ext-bg-secondary: #f8fafc;
+  --ext-text: #0f172a;
+  --ext-text-muted: #64748b;
+  --ext-border: #e2e8f0;
+  --ext-accent: #4F46E5;
+}
+
+.dark {
+  --ext-bg: #0f172a;
+  --ext-bg-secondary: #1e293b;
+  --ext-text: #f8fafc;
+  --ext-text-muted: #94a3b8;
+  --ext-border: #334155;
+  --ext-accent: #818cf8;
+}
+
+/* 基础样式重置 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @apply bg-extension-bg text-extension-text;
+  font-family: "PingFang SC", "MiSans", "Source Han Sans SC", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-extension-border rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-extension-text-muted;
+}
+
+/* Shadow DOM 内容脚本隔离样式 */
+.polymarket-ext-root {
+  all: initial;
+  font-family: "PingFang SC", "MiSans", "Source Han Sans SC", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ext-text);
+}
+
+/* 悬浮球样式 */
+.floating-ball {
+  @apply fixed z-[999999] cursor-pointer;
+  @apply w-12 h-12 rounded-full;
+  @apply bg-gradient-to-br from-polymarket-primary to-polymarket-secondary;
+  @apply shadow-float hover:shadow-popup;
+  @apply flex items-center justify-center;
+  @apply transition-all duration-300 ease-out;
+  @apply hover:scale-110 active:scale-95;
+}
+
+.floating-ball:hover {
+  @apply animate-pulse-slow;
+}
+
+/* 气泡卡片样式 */
+.bubble-card {
+  @apply bg-extension-bg border border-extension-border;
+  @apply rounded-xl shadow-popup;
+  @apply p-4 max-w-sm;
+  @apply animate-slide-in-up;
+}
+
+/* 市场卡片样式 */
+.market-card {
+  @apply bg-extension-bg-secondary border border-extension-border;
+  @apply rounded-lg p-3;
+  @apply hover:border-extension-accent hover:shadow-md;
+  @apply transition-all duration-200;
+}
+
+/* 价格标签样式 */
+.price-badge {
+  @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium;
+}
+
+.price-badge.yes {
+  @apply bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400;
+}
+
+.price-badge.no {
+  @apply bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400;
+}
+
+/* AI 分析徽章 */
+.ai-badge {
+  @apply inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs;
+  @apply bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400;
+  @apply border border-purple-200 dark:border-purple-800;
+}
+
+/* 高亮文本样式 */
+.highlight-text {
+  @apply relative cursor-pointer;
+  @apply border-b-2 border-dashed border-polymarket-primary/50;
+  @apply hover:border-polymarket-primary hover:bg-polymarket-primary/10;
+  @apply transition-colors duration-200;
+}
+
+/* 内联分析按钮 */
+.inline-analyze-btn {
+  @apply inline-flex items-center gap-1 px-2 py-0.5 ml-1;
+  @apply text-xs font-medium rounded-md;
+  @apply bg-polymarket-primary/10 text-polymarket-primary;
+  @apply hover:bg-polymarket-primary/20;
+  @apply transition-colors duration-200 cursor-pointer;
+}
+
+
+* { font-variant-numeric: tabular-nums; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: opacity 100ms linear !important; } }

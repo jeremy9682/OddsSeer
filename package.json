@@ -1,0 +1,17 @@
+{
+  "name": "oddsseer",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "npm --prefix extension run build",
+    "typecheck": "npm --prefix extension run typecheck",
+    "test:extension": "npm --prefix extension test",
+    "test:server": "npm --prefix server test",
+    "start": "npm --prefix server start",
+    "scan:secrets": "python3 scripts/scan-secrets.py ."
+  },
+  "engines": {
+    "node": ">=22.18"
+  },
+  "license": "MIT"
+}

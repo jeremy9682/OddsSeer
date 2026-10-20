@@ -1,0 +1,58 @@
+generator client {
+  provider = "prisma-client-js"
+}
+datasource db {
+  provider = "postgresql"
+  url = env("DATABASE_URL")
+}
+model MarketEvent {
+  id              String   @id @default(uuid())
+  externalId      String   @unique @map("external_id")  // Polymarket/Kalshi event ID
+  source          String   // "POLYMARKET" | "KALSHI"
+
+  // Event Content
+  title           String   @db.VarChar(500)
+  titleNormalized String   @map("title_normalized") @db.VarChar(500)  // lowercase, no punctuation
+  description     String?  @db.Text
+  searchText      String   @map("search_text") @db.Text  // title + description for full-text search
+
+  // Embedding vector - handled via raw SQL (pgvector)
+  // embedding      Unsupported("vector(1536)")
+
+  // Classification
+  category        String?  @db.VarChar(50)  // politics, crypto, sports, etc.
+
+  // Market Status
+  status          String   @default("ACTIVE")  // ACTIVE | CLOSED | RESOLVED
+
+  // Market Data
+  yesPrice        Decimal? @map("yes_price") @db.Decimal(5, 4)
+  noPrice         Decimal? @map("no_price") @db.Decimal(5, 4)
+  volume          Decimal? @db.Decimal(18, 2)
+  liquidity       Decimal? @db.Decimal(18, 2)
+
+  // Time Info
+  endDate         DateTime? @map("end_date")
+  url             String?  @db.VarChar(500)
+
+  // Metadata (flexible JSON for source-specific data)
+  metadata        Json?
+
+  // Sync & Timestamps
+  embeddingGeneratedAt DateTime? @map("embedding_generated_at")
+  lastSyncedAt    DateTime @default(now()) @map("last_synced_at")
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+
+  @@index([source])
+  @@index([status])
+  @@index([category])
+  @@index([status, source, category])
+  @@index([status, source])
+  @@index([status, category])
+  @@index([volume])
+  @@index([endDate])
+  @@index([createdAt])
+  @@index([lastSyncedAt])
+  @@map("market_events")
+}
