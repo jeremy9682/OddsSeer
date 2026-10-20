@@ -4,6 +4,24 @@
 
 [English](README.md) · [架构](docs/ARCHITECTURE.md) · [安全与隐私](SECURITY.md) · [验证状态](docs/VERIFICATION.md)
 
+## 看看它怎么用
+
+**浏览网页 → 选中问题 → 在当前页面发现相关预测市场。**
+
+[19 秒插件介绍视频](docs/media/oddsseer-extension-intro.mp4) · [完整截图与 GIF 画廊](docs/DEMO.md)
+
+> 以下为原插件内容脚本在本地虚构文章上的交互演示，使用模拟行情；视频由实际操作截图编排。它用于介绍交互方式，不代表当前版本已完成原生 Chrome 安装或跨网站验收。
+
+![OddsSeer：浏览、划词、发现相关市场](docs/media/oddsseer-extension-intro.gif)
+
+| 选中网页中的问题 | 查看相关市场 |
+| --- | --- |
+| ![划词并点击搜索](docs/media/00b-extension-selection.jpg) | ![当前页面中的市场结果卡片](docs/media/00c-extension-results.jpg) |
+
+读到新闻中的一个判断，可以选中文字查找对应市场，查看市场问题与公开价格，再决定是否加入关注。插件不要求先打开 PromptTrading。
+
+完整画廊也保留了早期工作台的中文界面、分析、模拟持仓与积分截图。这些均标为历史演示；当前开源插件不包含其交易、充值或订阅功能。
+
 ## 本地运行
 
 需要 Node.js 22.18+ 和 npm，在本仓库目录执行：

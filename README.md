@@ -4,6 +4,24 @@ A browser extension that brings prediction-market context to ordinary webpages. 
 
 [中文说明](README.zh-CN.md) · [Architecture](docs/ARCHITECTURE.md) · [Security and privacy](SECURITY.md) · [Verification status](docs/VERIFICATION.md)
 
+## See it in action
+
+**Read a webpage → select a question → discover related prediction markets in context.**
+
+[Watch the 19-second introduction](docs/media/oddsseer-extension-intro.mp4) · [Full screenshot and GIF gallery / 中文图文介绍](docs/DEMO.md)
+
+> This earlier interaction demo runs the original extension content script on a fictional local article with fixture market data. The video is an edited sequence of actual UI captures. It demonstrates the interaction, not native Chrome installation or cross-site acceptance of this release.
+
+![OddsSeer: read, select, discover](docs/media/oddsseer-extension-intro.gif)
+
+| Select a question on a page | Inspect the related market |
+| --- | --- |
+| ![Select text and click Search](docs/media/00b-extension-selection.jpg) | ![Market result within the current page](docs/media/00c-extension-results.jpg) |
+
+Find a question while reading, search for related markets, inspect public prices and choose what to follow. There is no requirement to open PromptTrading first.
+
+The full gallery also preserves historical workspace screenshots, including the Chinese UI, sample analysis, paper positions and virtual credits. Those are labeled historical demos; trading, top-ups and subscriptions are not features of this source release.
+
 ## Run locally
 
 Requires Node.js 22.18+ and npm. From this repository:
